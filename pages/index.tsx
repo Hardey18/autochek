@@ -2,7 +2,9 @@ import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Layout from '../components/Layout'
+import Footer from '../components/Footer'
+import ImageSlider from '../components/ImageSlider'
+import Nav from '../components/Nav'
 import imageLoader from '../imageLoader'
 import styles from '../styles/Home.module.css'
 import { GetAllCarsResults, GetCars, GetPopularMakesResults, MakeList } from '../types'
@@ -11,8 +13,15 @@ import { baseUrl } from '../utils/baseUrl'
 const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popularMakes, allCars }) => {
   return (
     <div className={styles.container}>
+      <Head>
+            <title>Chek Car App</title>
+            <meta name="description" content="Chek car app content" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
+      <Nav />
+      <ImageSlider />
       {allCars.map((result: any) => (
-        <div key={result.id}>
+        <div key={result.id} className={styles.carsContainer}>
           <Link href={`/cars/${result.id}`}>
             <a>
               <h3>{result.title}</h3>
@@ -28,13 +37,10 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
           />
         </div>
       ))}
+      <Footer />
     </div>
   )
 }
-
-// Home.getLayout = function getLayout(page: typeof Home) {
-//   return <Layout>{page}</Layout>
-// }
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const popularMakesRes = await fetch(`${baseUrl}/make?popular=true`);
@@ -52,5 +58,3 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 export default Home
-
-// const Home: NextPage<{popularMakes: MakeList[]}> = ({ popularMakes, allCars })

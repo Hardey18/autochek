@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from "next/head"
 import Image from 'next/image'
 import imageLoader from '../../imageLoader'
 import { GetServerSideProps } from 'next'
@@ -7,6 +8,11 @@ import Layout from '../../components/Layout'
 
 function CarDetailsPage({ car }: any) {
     return (<>
+        <Head>
+            <title>{car.carName}</title>
+            <meta name="description" content={car.carName} />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <h1>Car Details Page</h1>
         <div>{car.carName}</div>
         <Image 

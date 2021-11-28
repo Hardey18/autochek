@@ -8,7 +8,7 @@ function ShippingSection() {
     return (
         <div className={styles.container}>
             <h2>Electronics:</h2>
-            <p className={styles.textContent}>If a new car, we make it easy to find exactly what you need at a price you can afford. We offer Every Day Low Prices on on different brand of cars ranging from Toyota, Mercedes Benz, Audi, BMW, Honda, Hyundai, Jaguar, Kia, Land Rover, Nissan and many more.</p>
+            <p className={styles.textContent}>If you are considering a new car, we make it easy to find exactly what you need at a price you can afford. We offer Every Day Low Prices on on different brand of cars ranging from Toyota, Mercedes Benz, Audi, BMW, Honda, Hyundai, Jaguar, Kia, Land Rover, Nissan and many more.</p>
             <div className={styles.bottomSection}>
                 <div>
                     <IoMdCart size={60} color="#0879C9;" />

@@ -43,7 +43,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
                 height="200"
               />
               <a>
-                <h3>{result.title}</h3>
+                <h3>{result.title.length > 15 ? `${result.title.substring(0, 18)}...` : result.title}</h3>
               </a>
               <h3>{result.year}</h3>
               <Link href={`/cars/${result.id}`}>

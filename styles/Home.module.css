@@ -28,14 +28,21 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 2rem;
-    /* min-width: 200px; */
 }
 
 .carsContainer {
     margin: 10px;
     margin-bottom: 2rem;
     text-align: center;
+    width: 200px;
 }
+
+/* @media (max-width: 768px) {
+    .carsContainer {
+        margin: 0px;
+        background: #0879C9;
+    }
+} */
 
 .priceSection {   
     /* background: tomato; */

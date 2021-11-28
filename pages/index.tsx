@@ -12,6 +12,8 @@ import styles from '../styles/Home.module.css'
 import { GetAllCarsResults, GetCars, GetPopularMakesResults, MakeList } from '../types'
 import { baseUrl } from '../utils/baseUrl'
 import { FaChevronRight } from 'react-icons/fa'
+import ShippingSection from '../components/ShippingSection'
+import CategorySection from '../components/CategorySection'
 const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popularMakes, allCars }) => {
   console.log(popularMakes)
   return (
@@ -120,6 +122,8 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
             </form>
           </div>
       </div>
+      <ShippingSection />
+      <CategorySection />
       <Footer />
     </div>
   )

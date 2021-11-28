@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F8F9FA;
+    padding: 0 14rem;
+}
+
+.menu {
+    /* background: yellow; */
+    background: #F8F9FA;
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0;
+    }
+    .menu {
+        width: 100%;
+        /* background: tomato; */
+    }
+}

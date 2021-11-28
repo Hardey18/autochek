@@ -7,6 +7,7 @@ import { baseUrl } from '../../utils/baseUrl'
 import Layout from '../../components/Layout'
 
 function CarDetailsPage({ car }: any) {
+    console.log(car)
     return (<>
         <Head>
             <title>{car.carName}</title>

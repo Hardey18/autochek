@@ -9,6 +9,7 @@ import { FaCartArrowDown } from 'react-icons/fa'
 import styles from '../styles/Nav.module.css'
 import logo from '../public/icons/logo2.png'
 import imageLoader from '../imageLoader'
+import NavMenu from './reusables/NavMenu'
 
 function Nav() {
     return (<>
@@ -19,23 +20,23 @@ function Nav() {
             </div>
             <div className={styles.rightContainer}>
                 <div className={styles.textIconContainer}>
-                    <MdLocationOn />
+                    <MdLocationOn size={16} />
                     <div>Select Location</div>
                 </div> |
                 <div className={styles.textIconContainer}>
-                    <FaTruckMoving />
+                    <FaTruckMoving size={16} />
                     <div>Track Order</div>
                 </div> |
                 <div className={styles.textIconContainer}>
-                    <IoMdCall />
+                    <IoMdCall size={16} />
                     <div>001 234 5678</div>
                 </div> |
                 <div className={styles.textIconContainer}>
-                    <HiOutlineLogin />
+                    <HiOutlineLogin size={16} />
                     <div>Login</div>
                 </div> |
                 <div className={styles.textIconContainer}>
-                    <HiOutlineLogin />
+                    <HiOutlineLogin size={16} />
                     <div>Register</div>
                 </div>
             </div>
@@ -60,6 +61,8 @@ function Nav() {
                 </div>
             </div>
         </div>
+
+        <NavMenu />
     </>)
 }
 

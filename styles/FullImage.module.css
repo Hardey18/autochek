@@ -1,0 +1,25 @@
+.container {
+    /* background: red; */
+}
+
+.bottom {
+    padding: 2rem 14rem;
+    display: flex;
+    background: #EEEEEE;
+}
+
+.bottom > div:first-child {
+    color: #F45C5D;
+    cursor: pointer;
+}
+
+.bottom > div {
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .bottom {
+        padding: 1rem 2rem;
+    }
+}

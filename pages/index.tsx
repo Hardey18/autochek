@@ -15,7 +15,6 @@ import { FaChevronRight } from 'react-icons/fa'
 import ShippingSection from '../components/ShippingSection'
 import CategorySection from '../components/CategorySection'
 const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popularMakes, allCars }) => {
-  console.log(popularMakes)
   return (
     <div className={styles.container}>
       <Head>
@@ -24,10 +23,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
             <link rel="icon" href="/favicon.ico" />
         </Head>
       <Nav />
-      {/* <Box maxWidth='1000px' margin='auto' p='4'>
-        <ImageSlider />
-      </Box> */}
-      <Parallax />
+      <ImageSlider />
       <h1 className={styles.productHeader}><span className={styles.eachChar}>O</span>ur <span className={styles.eachChar}>P</span>roducts - <span className={styles.eachChar}>C</span>ars</h1>
       <div className={styles.mainBrand}>
         <div className={styles.carSection}>
@@ -122,6 +118,20 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
             </form>
           </div>
       </div>
+      <Parallax bg="url('https://images.hgmsites.net/lrg/2018-acura-nsx_100618872_l.jpg')">
+        <div className={styles.parallax}>
+          <div>
+            <h3>Smooth, Rich & Loud Audio</h3>
+            <h1>Branded Headphones</h1>
+            <h4>Sale up to 25% off all in store</h4>
+          </div>
+          <div>
+            <h3>A Bigger Phone</h3>
+            <h1>Smart Phones 5</h1>
+            <h4>Free shipping order over $100</h4>
+          </div>
+        </div>
+      </Parallax>
       <ShippingSection />
       <CategorySection />
       <Footer />

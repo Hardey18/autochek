@@ -1,17 +1,35 @@
-import React from 'react'
-import Image from 'next/image'
-import { Parallax } from 'react-parallax';
+import React from "react";
+import { Parallax, Background } from "react-parallax";
+import styles from '../styles/Parallax.module.css';
 
-import styles from '../styles/Parallax.module.css'
-import imageLoader from '../imageLoader'
-// import image from '../public/icons/four.jpeg'
+import one from '../public/icons/one.jpeg'
+import two from '../public/icons/two.jpeg'
+import three from '../public/icons/three.jpeg'
+import four from '../public/icons/four.jpeg'
+import imageLoader from '../imageLoader';
 
-function ParallaxCom() {
-    return (
-        <Parallax blur={10} bgImage={<Image />} bgImageAlt="the cat" strength={200}>
-            Content goes here. Parallax height grows with content height.
-        </Parallax>
-    )
-}
+const Paralax = ({ children, bg }: any) => (
+  <div className={styles.styles}>
+    <Parallax strength={500}>
+      <Background className="custom-bg">
+        <div
+          style={{
+            height: 2000,
+            width: 2000,
+            backgroundImage: bg,
+            // backgroundPosition: "center",
+            // backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            // position: "relative",
+          }}
+        />
+      </Background>
+      <div>
+        {children}
+      </div>
+    </Parallax>
+    <div className={styles.html} />
+  </div>
+);
 
-export default ParallaxCom
+export default Paralax;

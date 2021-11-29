@@ -14,11 +14,14 @@
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        /* flex-direction: column; */
         padding: 0;
     }
+    .container > div {
+        margin-left: 1rem;
+    }
     .menu {
-        width: 100%;
+        width: 25%;
         /* background: tomato; */
     }
 }

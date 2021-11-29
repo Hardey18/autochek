@@ -36,5 +36,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# sample file for 
+# sample files 
 sample.tsx
+ImageSlider.tsx

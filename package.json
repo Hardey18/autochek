@@ -16,17 +16,22 @@
     "framer-motion": "^5.3.3",
     "next": "12.0.4",
     "next-google-fonts": "^2.2.0",
+    "nuka-carousel": "^4.8.3",
     "react": "17.0.2",
     "react-carousel-minimal": "^1.4.1",
     "react-dom": "17.0.2",
     "react-horizontal-scrolling-menu": "^2.6.1",
     "react-icons": "^4.3.1",
     "react-parallax": "^3.3.0",
-    "react-slideshow-image": "^3.6.0"
+    "react-responsive-carousel": "^3.2.22",
+    "react-slideshow-image": "^3.6.0",
+    "react-swipe": "^6.0.4",
+    "reactstrap": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "16.11.10",
     "@types/react": "17.0.37",
+    "@types/react-swipe": "^6.0.2",
     "eslint": "7",
     "eslint-config-next": "12.0.4",
     "typescript": "4.5.2"

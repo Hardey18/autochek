@@ -32,20 +32,22 @@ const NavMenu: NextPage = () => {
   // }
     return (<>
     <div className={styles.container}>
-      <Select
-          showSearch
-          style={{ width: 200 }}
-          placeholder="Search a model"
-          optionFilterProp="children"
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onSearch={onSearch}
-        >
-        <Option value="jack">Jack</Option>
-        <Option value="lucy">Lucy</Option>
-        <Option value="tom">Tom</Option>
-      </Select>
+      <div>
+        <Select
+            showSearch
+            style={{ width: 300 }}
+            placeholder="Search a model"
+            optionFilterProp="children"
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onSearch={onSearch}
+          >
+          <Option value="jack">Jack</Option>
+          <Option value="lucy">Lucy</Option>
+          <Option value="tom">Tom</Option>
+        </Select>
+      </div>
 
       <Menu className={styles.menu} selectedKeys={[state]} mode="horizontal">
         <Menu.Item key="home">

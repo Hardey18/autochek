@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FaShoppingCart, FaTruckMoving } from 'react-icons/fa'
 import { MdLocationOn } from 'react-icons/md'
 import { IoMdCall } from 'react-icons/io'
@@ -43,14 +44,16 @@ function Nav() {
         </div>
 
         <div className={styles.bottomSection}>
-            <Image
-                loader={imageLoader}
-                unoptimized
-                src={logo}
-                alt="Logo"
-                width="150"
-                height="150"
-            />
+            <Link href="/" passHref>
+                <Image
+                    loader={imageLoader}
+                    unoptimized
+                    src={logo}
+                    alt="Logo"
+                    width="150"
+                    height="150"
+                />
+            </Link>
             <div className={styles.inputContainer}>
                 <div className={styles.inputContainerInner}>
                     <input type="text" placeholder="Search" />

@@ -105,7 +105,7 @@
         width: 100%;
     }
     .inputContainerInner > input {
-        padding: 1.2rem;
+        padding: .6rem;
         margin-right: 0;
     }
     .inputContainerInner > button {
@@ -114,6 +114,7 @@
     }
     .cart {
         margin-left: 1rem;
+        padding: 8px;
     }
     .inputContainer {
         align-items: center;

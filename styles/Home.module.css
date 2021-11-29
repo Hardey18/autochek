@@ -1,7 +1,7 @@
 .mainBrand {
     display: flex;
     justify-content: space-between;
-    padding: 0 14rem;
+    padding: 0 14rem 8rem 14rem;
 }
 
 @media (max-width: 768px) {
@@ -14,6 +14,7 @@
 .productHeader {
     text-shadow: gray 4px 4px 8px;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .eachChar {
@@ -123,4 +124,31 @@
 .form {
     border-bottom: 1px solid lightgrey;
     /* background: red; */
+}
+
+.parallax {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 14rem
+}
+
+.parallax > div {
+    width: 48%;
+    text-align: left;
+    background: #EFEDEE;
+    border-radius: 4px;
+    padding: 8rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .parallax > div {
+        width: 100%;
+        border-radius: 4px;
+        padding: 2rem;
+        margin-bottom: 4rem;
+    }
 }

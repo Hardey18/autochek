@@ -89,12 +89,12 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
 
             <h2>Models</h2>
             <form className={styles.form}>
-              {popularMakes.map((result) => (<>
+              {popularMakes.map((result) => (<div key={result.name}>
                 <input type="checkbox" id="first-next" name={result.name} />
                 <label className={styles.checkLabel} 
                 htmlFor="first-next">{result.name}</label>
                 <div className={styles.separator}></div>
-              </>))}
+              </div>))}
             </form>
 
             <h2>Discount</h2>
@@ -141,7 +141,6 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const popularMakesRes = await fetch(`${baseUrl}/make?popular=true`);
-  // console.log("Testing")
   const allCarsRes = await fetch(`${baseUrl}/car/search`)
 
   const result: GetPopularMakesResults = await popularMakesRes.json();

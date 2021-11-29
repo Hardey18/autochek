@@ -15,6 +15,8 @@ import { FaChevronRight } from 'react-icons/fa'
 import ShippingSection from '../components/ShippingSection'
 import CategorySection from '../components/CategorySection'
 const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popularMakes, allCars }) => {
+  allCars.shift();
+  // console.log("all", newCars)
   return (
     <div className={styles.container}>
       <Head>
@@ -34,7 +36,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
                 unoptimized
                 className={styles.featuredImage}
                 src={result.imageUrl ? result.imageUrl : "https://th.bing.com/th/id/OIP.El6pwGNKtZphJAZy8F5uqQHaEK?pid=ImgDet&rs=1"} 
-                alt={result.title} 
+                alt="Cars"
                 width="200"
                 height="200"
               />

@@ -66,9 +66,9 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
             </div>
             <h2>Discount</h2>
             <form className={styles.form}>
-              <input type="checkbox" id="first" name="first" />
+              <input type="checkbox" id="first-here" name="first-here" />
               <label className={styles.checkLabel} 
-              htmlFor="first">5% or More</label>
+              htmlFor="first-here">5% or More</label>
               <div className={styles.separator}></div>
               <input type="checkbox" id="second" name="second" />
               <label className={styles.checkLabel} htmlFor="second">10% or More</label>
@@ -90,26 +90,26 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
             <h2>Models</h2>
             <form className={styles.form}>
               {popularMakes.map((result) => (<>
-                <input type="checkbox" id={result.name} name={result.name} />
+                <input type="checkbox" id="first-next" name={result.name} />
                 <label className={styles.checkLabel} 
-                htmlFor="first">{result.name}</label>
+                htmlFor="first-next">{result.name}</label>
                 <div className={styles.separator}></div>
               </>))}
             </form>
 
             <h2>Discount</h2>
             <form className={styles.form}>
-              <input type="checkbox" id="first" name="first" />
+              <input type="checkbox" id="first-last" name="first-last" />
               <label className={styles.checkLabel} 
-              htmlFor="first">Eligible for Cash On Delivery</label>
+              htmlFor="first-last">Eligible for Cash On Delivery</label>
               <div className={styles.separator}></div>
             </form>
 
             <h2>New Arrivals</h2>
             <form className={styles.form}>
-              <input type="checkbox" id="first" name="first" />
+              <input type="checkbox" id="first-end" name="first-end" />
               <label className={styles.checkLabel} 
-              htmlFor="first">Last 30 Days</label>
+              htmlFor="first-end">Last 30 Days</label>
               <div className={styles.separator}></div>
               <input type="checkbox" id="first" name="first" />
               <label className={styles.checkLabel} 

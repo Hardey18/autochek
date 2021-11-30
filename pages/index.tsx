@@ -14,7 +14,7 @@ import { baseUrl } from '../utils/baseUrl'
 import { FaChevronRight } from 'react-icons/fa'
 import ShippingSection from '../components/ShippingSection'
 import CategorySection from '../components/CategorySection'
-const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popularMakes, allCars }) => {
+const Home: NextPage<{ allCars: GetCars[] }> = ({ allCars }) => {
   allCars.shift();
   // console.log("all", newCars)
   return (
@@ -30,7 +30,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
       <div className={styles.mainBrand}>
         <div className={styles.carSection}>
           Hello there
-          {JSON.stringify(popularMakes)}
+          {JSON.stringify(allCars)}
           {/* {allCars.map((result: any) => (
             <div key={result.id} className={styles.carsContainer}>
               <Image
@@ -91,7 +91,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
               <div className={styles.separator}></div>
             </form>
 
-            <h2>Models</h2>
+            {/* <h2>Models</h2>
             <form className={styles.form}>
               {popularMakes.map((result) => (<div key={result.name}>
                 <input type="checkbox" id="first-next" name={result.name} />
@@ -99,7 +99,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
                 htmlFor="first-next">{result.name}</label>
                 <div className={styles.separator}></div>
               </div>))}
-            </form>
+            </form> */}
 
             <h2>Discount</h2>
             <form className={styles.form}>
@@ -144,15 +144,15 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const popularMakesRes = await fetch(`${baseUrl}/make?popular=true`);
+  // const popularMakesRes = await fetch(`${baseUrl}/make?popular=true`);
   const allCarsRes = await fetch(`${baseUrl}/car/search`)
 
-  const result: GetPopularMakesResults = await popularMakesRes.json();
+  // const result: GetPopularMakesResults = await popularMakesRes.json();
   const allCarsResult: GetAllCarsResults = await allCarsRes.json();
 
   return {
     props: {
-      popularMakes: result.makeList,
+      // popularMakes: result.makeList,
       allCars: allCarsResult.result
     }
   }

@@ -141,19 +141,19 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const [ popularMakesRes, allCarsRes ] = await Promise.all([
+  const [ allCarsRes, popularMakesRes ] = await Promise.all([
+    fetch(`${baseUrl}/car/search`),
     fetch(`${baseUrl}/make?popular=true`),
-    fetch(`${baseUrl}/car/search`)
   ]);
-  const [ popularMakesResult, allCarsResult ] = await Promise.all([
+  const [ allCarsResult, popularMakesResult ] = await Promise.all([
+    allCarsRes.json(),
     popularMakesRes.json(), 
-    allCarsRes.json()
   ]);
 
   return {
     props: {
+      allCars: allCarsResult.result,
       popularMakes: popularMakesResult.makeList,
-      allCars: allCarsResult.result
     }
   }
 }

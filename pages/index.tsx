@@ -15,8 +15,7 @@ import { FaChevronRight } from 'react-icons/fa'
 import ShippingSection from '../components/ShippingSection'
 import CategorySection from '../components/CategorySection'
 const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popularMakes, allCars }) => {
-  allCars.shift();
-  // console.log("all", newCars)
+  console.log("all", allCars)
   return (
     <div className={styles.container}>
       <Head>
@@ -142,15 +141,18 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const popularMakesRes = await fetch(`${baseUrl}/make?popular=true`);
-  const allCarsRes = await fetch(`${baseUrl}/car/search`)
-
-  const result: GetPopularMakesResults = await popularMakesRes.json();
-  const allCarsResult: GetAllCarsResults = await allCarsRes.json();
+  const [ popularMakesRes, allCarsRes ] = await Promise.all([
+    fetch(`${baseUrl}/make?popular=true`),
+    fetch(`${baseUrl}/car/search`)
+  ]);
+  const [ popularMakesResult, allCarsResult ] = await Promise.all([
+    popularMakesRes.json(), 
+    allCarsRes.json()
+  ]);
 
   return {
     props: {
-      popularMakes: result.makeList,
+      popularMakes: popularMakesResult.makeList,
       allCars: allCarsResult.result
     }
   }

@@ -29,9 +29,10 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
       <h1 className={styles.productHeader}><span className={styles.eachChar}>O</span>ur <span className={styles.eachChar}>P</span>roducts - <span className={styles.eachChar}>C</span>ars</h1>
       <div className={styles.mainBrand}>
         <div className={styles.carSection}>
-          {allCars.map((result: any) => (
+          Hello there
+          {/* {allCars.map((result: any) => (
             <div key={result.id} className={styles.carsContainer}>
-              {/* <Image
+              <Image
                 loader={imageLoader}
                 unoptimized
                 className={styles.featuredImage}
@@ -39,7 +40,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
                 alt="Cars"
                 width="200"
                 height="200"
-              /> */}
+              />
               <a>
                 <h3>{result.title.length > 15 ? `${result.title.substring(0, 18)}...` : result.title}</h3>
               </a>
@@ -49,7 +50,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
                   <h3 className={styles.viewDetails}>VIEW DETAILS</h3>
                 </a>
               </Link>
-            </div>))}
+            </div>))} */}
           </div>
           <div className={styles.priceSection}>
             <h2>Search Here</h2>

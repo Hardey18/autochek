@@ -9,7 +9,7 @@ import ShippingSection from '../../components/ShippingSection'
 import CategorySection from '../../components/CategorySection'
 
 function CarDetailsPage({ car, media }: any) {
-    console.log(media)
+    console.log(car)
     return (<>
         <Head>
             <title>{car.carName}</title>
@@ -25,7 +25,11 @@ function CarDetailsPage({ car, media }: any) {
             alt={car.carName}
             width="200"
             height="200"
-        />
+            />
+            <div>{car.engineType}</div>
+            <div>{car.exteriorColor}</div>
+            <div>{car.fuelType}</div>
+            <div>{car.year}</div>
         <h3>Car Medias</h3>
         {media.map((result: any) => (
             <Image

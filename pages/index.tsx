@@ -31,7 +31,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
         <div className={styles.carSection}>
           {allCars.map((result: any) => (
             <div key={result.id} className={styles.carsContainer}>
-              <Image
+              {/* <Image
                 loader={imageLoader}
                 unoptimized
                 className={styles.featuredImage}
@@ -39,7 +39,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
                 alt="Cars"
                 width="200"
                 height="200"
-              />
+              /> */}
               <a>
                 <h3>{result.title.length > 15 ? `${result.title.substring(0, 18)}...` : result.title}</h3>
               </a>

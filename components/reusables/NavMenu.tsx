@@ -9,24 +9,24 @@ import type { GetStaticProps, NextPage } from 'next';
 const { SubMenu } = Menu;
 const { Option } = Select;
 
-const onChange = (value: any) => {
-  console.log(`selected ${value}`);
-}
+// const onChange = (value: any) => {
+//   console.log(`selected ${value}`);
+// }
 
-const onBlur = () => {
-  console.log('blur');
-}
+// const onBlur = () => {
+//   console.log('blur');
+// }
 
-const onFocus = () => {
-  console.log('focus');
-}
+// const onFocus = () => {
+//   console.log('focus');
+// }
 
-const onSearch = (val: any) => {
-  console.log('search:', val);
-}
+// const onSearch = (val: any) => {
+//   console.log('search:', val);
+// }
 
 const NavMenu: NextPage = () => {
-  const [state, setState] = useState("home")
+  // const [state, setState] = useState("home")
   // function onClick(e: { target: { value: any; }; }) {
   //   console.log(setState(`selected ${e.target.value}`));
   // }
@@ -38,10 +38,10 @@ const NavMenu: NextPage = () => {
             style={{ width: 300 }}
             placeholder="Search a model"
             optionFilterProp="children"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
+            // onChange={onChange}
+            // onFocus={onFocus}
+            // onBlur={onBlur}
+            // onSearch={onSearch}
           >
           <Option value="jack">Jack</Option>
           <Option value="lucy">Lucy</Option>
@@ -49,7 +49,7 @@ const NavMenu: NextPage = () => {
         </Select>
       </div>
 
-      <Menu className={styles.menu} selectedKeys={[state]} mode="horizontal">
+      {/* <Menu className={styles.menu} selectedKeys={[state]} mode="horizontal">
         <Menu.Item key="home">
           <Link href="/">Home</Link>
         </Menu.Item>
@@ -67,7 +67,7 @@ const NavMenu: NextPage = () => {
             Contact Us
           </Link>
         </Menu.Item>
-      </Menu>
+      </Menu> */}
     </div>
     </>);
 }

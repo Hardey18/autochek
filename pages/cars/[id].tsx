@@ -9,7 +9,6 @@ import ShippingSection from '../../components/ShippingSection'
 import CategorySection from '../../components/CategorySection'
 
 function CarDetailsPage({ car, media }: any) {
-    // console.log(car)
     return (<>
         <Head>
             <title>{car.carName}</title>
@@ -31,7 +30,7 @@ function CarDetailsPage({ car, media }: any) {
             <div>{car.fuelType}</div>
             <div>{car.year}</div>
         <h3>Car Medias</h3>
-        {/* {media.map((result: any) => (
+        {media.map((result: any) => (
             (result.url && <Image
                 key={result.id}
                 loader={imageLoader}
@@ -41,7 +40,7 @@ function CarDetailsPage({ car, media }: any) {
                 height="200"
                 alt="Car Media"
             />)
-        ))} */}
+        ))}
         <ShippingSection />
         <CategorySection />
     </>)
@@ -51,47 +50,19 @@ CarDetailsPage.getLayout = function getLayout(page: typeof CarDetailsPage) {
     return <Layout>{page}</Layout>
 }
 
-export async function getStaticPaths () {
-    const getCars: any = await fetch("https://api.staging.myautochek.com/v1/inventory/car/search")
-
-    const result = await getCars.json()
-  
-    return {
-      paths: result.result.map((car: any) => {
-          return { params: { id: String(car.id) } }
-      }),
-      fallback: false
-    }
-  }
-
-export async function getStaticProps( { params }: { params: { id: string } }) {
-    const carDetailsRes = await fetch(`https://api.staging.myautochek.com/v1/inventory/car/${params.id}`);
-    // const carMedia = await fetch(`${baseUrl}/car_media?carId=${context.query.id}`);
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const carDetailsRes = await fetch(`${baseUrl}/car/${context.query.id}`);
+    const carMedia = await fetch(`${baseUrl}/car_media?carId=${context.query.id}`);
 
     const car = await carDetailsRes.json();
-    // const media = await carMedia.json();
+    const media = await carMedia.json();
 
     return {
         props: {
             car,
-            // media: media.carMediaList
+            media: media.carMediaList
         }
     }
 }
-
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//     const carDetailsRes = await fetch(`${baseUrl}/car/${context.query.id}`);
-//     const carMedia = await fetch(`${baseUrl}/car_media?carId=${context.query.id}`);
-
-//     const car = await carDetailsRes.json();
-//     const media = await carMedia.json();
-
-//     return {
-//         props: {
-//             car,
-//             media: media.carMediaList
-//         }
-//     }
-// }
 
 export default CarDetailsPage;

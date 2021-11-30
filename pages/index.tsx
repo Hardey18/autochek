@@ -93,7 +93,7 @@ const Home: NextPage = ({ popularMakes, allCars }: any) => {
 
             <h2>Models</h2>
             <form className={styles.form}>
-              {popularMakes.map((result) => (<div key={result.name}>
+              {popularMakes.map((result: any) => (<div key={result.name}>
                 <input type="checkbox" id="first-next" name={result.name} />
                 <label className={styles.checkLabel} 
                 htmlFor="first-next">{result.name}</label>
@@ -147,8 +147,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const popularMakesRes = await fetch(`${baseUrl}/make?popular=true`);
   const allCarsRes = await fetch(`${baseUrl}/car/search`)
 
-  const result = await popularMakesRes.json();
-  const allCarsResult = await allCarsRes.json();
+  const result: any = await popularMakesRes.json();
+  const allCarsResult: any = await allCarsRes.json();
 
   return {
     props: {

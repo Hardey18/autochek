@@ -30,6 +30,7 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
       <div className={styles.mainBrand}>
         <div className={styles.carSection}>
           Hello there
+          {JSON.stringify(allCars)}
           {/* {allCars.map((result: any) => (
             <div key={result.id} className={styles.carsContainer}>
               <Image

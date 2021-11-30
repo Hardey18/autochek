@@ -32,15 +32,15 @@ function CarDetailsPage({ car, media }: any) {
             <div>{car.year}</div>
         <h3>Car Medias</h3>
         {media.map((result: any) => (
-            <Image
-            key={result.id}
-            loader={imageLoader}
-            unoptimized
-            src={result.url}
-            width="200"
-            height="200"
-            alt="Car Media"
-        />
+            (result.url && <Image
+                key={result.id}
+                loader={imageLoader}
+                unoptimized
+                src={result.url}
+                width="200"
+                height="200"
+                alt="Car Media"
+            />)
         ))}
         <ShippingSection />
         <CategorySection />

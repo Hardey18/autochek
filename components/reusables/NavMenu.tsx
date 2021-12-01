@@ -43,9 +43,18 @@ const NavMenu: NextPage = () => {
             onBlur={onBlur}
             onSearch={onSearch}
           >
-          <Option value="jack">Jack</Option>
-          <Option value="lucy">Lucy</Option>
-          <Option value="tom">Tom</Option>
+          <Option value="jack">Audi</Option>
+          <Option value="lucy">BMW</Option>
+          <Option value="tom">Honda</Option>
+          <Option value="tom">Hyundai</Option>
+          <Option value="tom">Jaguar</Option>
+          <Option value="tom">Kia</Option>
+          <Option value="tom">Land Rover</Option>
+          <Option value="tom">Lexus</Option>
+          <Option value="tom">Mercedes-Benz</Option>
+          <Option value="tom">Nissan</Option>
+          <Option value="tom">Toyota</Option>
+          <Option value="tom">Volkswagen</Option>
         </Select>
       </div>
 

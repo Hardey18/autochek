@@ -52,6 +52,7 @@ function Contact() {
             </div>
             <div className={styles.textAreaContainer}>
                 <textarea className={styles.textArea} name="Message" id="message" placeholder="Message"></textarea>
+                <button type="submit" className={styles.submit}>Submit</button>
             </div>
             <ShippingSection />
             <CategorySection />

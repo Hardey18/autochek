@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import Image from 'next/image'
 import ReactSwipe from 'react-swipe';
 
+import styles from '../styles/ImageSlider.module.css'
 import one from '../public/icons/one.jpeg'
 import two from '../public/icons/two.jpeg'
 import three from '../public/icons/three.jpeg'
@@ -59,8 +60,10 @@ export default function ImageSlider() {
           />
         </div>
       </ReactSwipe>
-      <button onClick={() => reactSwipeEl.prev()}>Previous</button>
-      <button onClick={() => reactSwipeEl.next()}>Next</button>
+      <div className={styles.button}>
+        <button onClick={() => reactSwipeEl.prev()}>Previous</button>
+        <button onClick={() => reactSwipeEl.next()}>Next</button>
+      </div>
     </div>
     </>
   );

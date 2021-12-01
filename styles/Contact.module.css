@@ -84,6 +84,21 @@
     outline: none;
 }
 
+.submit {
+    background: #0879C9;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 14px;
+    margin-top: 2rem;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #000000;
+}
+
 @media (max-width: 768px) {
     .topInput {
         flex-direction: column;

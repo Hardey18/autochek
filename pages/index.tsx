@@ -122,14 +122,40 @@ const Home: NextPage<{ popularMakes: MakeList[], allCars: GetCars[] }> = ({ popu
       <Parallax bg="url('https://images.hgmsites.net/lrg/2018-acura-nsx_100618872_l.jpg')">
         <div className={styles.parallax}>
           <div>
-            <h3>Smooth, Rich & Loud Audio</h3>
-            <h1>Branded Headphones</h1>
-            <h4>Sale up to 25% off all in store</h4>
+            <div>
+              <h3>Smooth, Rich & Loud Audio</h3>
+              <h1>Branded Headphones</h1>
+              <h4>Sale up to 25% off all in store</h4>
+            </div>
+            <div>
+              <Image
+                loader={imageLoader}
+                unoptimized
+                className={styles.featuredImage}
+                src="https://th.bing.com/th/id/OIP.El6pwGNKtZphJAZy8F5uqQHaEK?pid=ImgDet&rs=1"
+                alt="Cars"
+                width="200"
+                height="200"
+              />
+            </div>
           </div>
           <div>
-            <h3>A Bigger Phone</h3>
-            <h1>Smart Phones 5</h1>
-            <h4>Free shipping order over $100</h4>
+            <div>
+              <h3>A Bigger Phone</h3>
+              <h1>Smart Phones 5</h1>
+              <h4>Free shipping order over $100</h4>
+            </div>
+            <div>
+              <Image
+                loader={imageLoader}
+                unoptimized
+                className={styles.featuredImage}
+                src="https://th.bing.com/th/id/OIP.El6pwGNKtZphJAZy8F5uqQHaEK?pid=ImgDet&rs=1"
+                alt="Cars"
+                width="200"
+                height="200"
+              />
+            </div>
           </div>
         </div>
       </Parallax>

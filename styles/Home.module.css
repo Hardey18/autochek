@@ -132,12 +132,19 @@
     padding: 5rem 14rem
 }
 
+.parallax > div > div > h3 {
+    color: red;
+}
+
 .parallax > div {
     width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: left;
     background: #EFEDEE;
     border-radius: 4px;
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
 }
 
 @media (max-width: 768px) {
@@ -147,6 +154,7 @@
     }
     .parallax > div {
         width: 100%;
+        flex-direction: column;
         border-radius: 4px;
         padding: 2rem;
         margin-bottom: 4rem;

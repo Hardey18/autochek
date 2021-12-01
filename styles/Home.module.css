@@ -38,15 +38,7 @@
     width: 200px;
 }
 
-/* @media (max-width: 768px) {
-    .carsContainer {
-        margin: 0px;
-        background: #0879C9;
-    }
-} */
-
 .priceSection {   
-    /* background: tomato; */
     background: #F9F9F9;
     width: 30%;
     padding: 3rem 2rem;
@@ -59,11 +51,6 @@
     .priceSection {
         width: 100%;
     }
-}
-
-.featuredImage {
-    /* margin: 20px; */
-    /* border-radius: 20px; */
 }
 
 .viewDetails {
@@ -123,7 +110,6 @@
 
 .form {
     border-bottom: 1px solid lightgrey;
-    /* background: red; */
 }
 
 .parallax {

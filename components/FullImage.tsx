@@ -14,7 +14,6 @@ function FullImage({ page }: any) {
                 src={six}
                 layout='responsive'
                 objectFit='contain'
-                // height={100}
                 alt="Full Image"
             />
             <div className={styles.bottom}>

@@ -7,14 +7,12 @@
 }
 
 .menu {
-    /* background: yellow; */
     background: #F8F9FA;
     width: 40%;
 }
 
 @media (max-width: 768px) {
     .container {
-        /* flex-direction: column; */
         padding: 0;
     }
     .container > div {
@@ -22,6 +20,5 @@
     }
     .menu {
         width: 25%;
-        /* background: tomato; */
     }
 }

@@ -42,7 +42,6 @@
 @media (max-width: 768px) {
     .bottomSection {
         flex-direction: column;
-        /* padding: 0; */
     }
 
     .bottomSection > div {

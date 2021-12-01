@@ -26,10 +26,6 @@ const onSearch = (val: any) => {
 }
 
 const NavMenu: NextPage = () => {
-  // const [state, setState] = useState("home")
-  // function onClick(e: { target: { value: any; }; }) {
-  //   console.log(setState(`selected ${e.target.value}`));
-  // }
     return (<>
     <div className={styles.container}>
       <div>
